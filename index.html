@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <section id="section-1">
+    <img src="assets/logo.svg" alt="logo" class="logo-img" />
+    <div class="container">
+        <div class="pick-mark">
+            <p class="title">Pick player 1's mark</p>
+            <div class="marks-btns">
+                <button class="btn active" onclick="changeBtn('x')">
+
+                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" class="x-icon">
+                        <path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#31C3BD" fill-rule="evenodd"/></svg>
+                </button>
+                <button class="btn" onclick="changeBtn('o')">
+
+                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" class="o-icon">
+                        <path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#F2B137"/></svg>
+                </button>
+            </div>
+            <p class="warning">Remember: X goes first</p>
+        </div>
+        <div class="pick-player">
+                <button type="button" class="cpu title" onclick="playerBtn('cpu')">NEW GAME (VS CPU)</button>
+                <button type="button" class="player title" onclick="playerBtn('player')">NEW GAME (VS PLAYER)</button> 
+        </div>
+    </div>
+    </section>
+    <section id="section-2">
+        <div class="board">
+        <header id="header">
+            <img src="assets/logo.svg" class="logo-img-2" />
+            <div class="turn">
+                <img src="assets/icon-x-small.svg" class="mark-img x-icon-2" />
+               <img src="assets/icon-o-small.svg" class="mark-img o-icon-2"/> 
+                <p>TURN</p>
+            </div>
+            <button class="restart" type="reset" onclick="RestartGame()">
+                <img src="assets/icon-restart.svg" />
+            </button>
+        </header>
+        <main id="main">
+            <div class="square">
+            </div>
+            <div class="square">
+            </div>
+            <div class="square">
+            </div>
+            <div class="square"></div>
+            <div class="square">
+            </div>
+            <div class="square">
+            </div>
+            <div class="square">
+            </div>
+            <div class="square">
+            </div>
+            <div class="square">
+            </div>
+            
+        </main>
+        
+        <footer id="footer">
+            <div class="box xResult">
+                <p class="x-player">X (YOU)</p>
+                    <span class="x-score">0</span>
+            </div>
+            <div class="box tieResult">
+                <p class="ties">TIES</p>
+                    <span class="ties-score">0</span>
+            </div>
+            <div class="box oResult">
+                <p class="o-player">O (CPU)</p>
+                <span class="o-score">0</span>
+
+            </div>
+        </footer>
+        </div>
+
+    </section>
+    <section id="section-3">
+    <div class="cover">
+    <div class="winner-looser">
+        <h2 class="win">YOU WON!</h2>
+        <div class="winner-icon">
+        <img src="assets/icon-x-small.svg" class="winner"/> 
+        <p class="winningSms">TAKES THE ROUND</p>
+        </div>
+        <div>
+        <button class="quit" type="button" onclick="Restart()">QUIT</button>
+        <button class="next-round" type="button">NEXT ROUND</button>
+        </div>
+    </div>
+    </div>
+    </section>
+    <section id="section-4">
+        <div class="cover">
+        <div class="restart-game">
+            <p>RESTART GAME?</p>
+            <div class="no-yes">
+            <button class="no" type="button" onclick="no()">NO, CANCEL</button>
+            <button class="yes" type="button" onclick="yes()">YES, RESTART</button>
+            </div>
+            
+        </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
